@@ -13,6 +13,7 @@
         <module>lwsl-core</module>
         <module>lwsl-server</module>
         <module>lwsl-client</module>
+        <module>lwsl-tests</module>
     </modules>
 
     <properties>
