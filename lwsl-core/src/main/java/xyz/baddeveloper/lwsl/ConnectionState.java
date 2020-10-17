@@ -2,6 +2,7 @@ package xyz.baddeveloper.lwsl;
 
 /**
  * Represents the current state of a {@link xyz.baddeveloper.lwsl.Connection} object.
+ *
  * @see xyz.baddeveloper.lwsl.Connection
  */
 public enum ConnectionState {
