@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>lwsl-server</artifactId>
+    <artifactId>lwsl-tcp</artifactId>
 
     <dependencies>
         <dependency>
