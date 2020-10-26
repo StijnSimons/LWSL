@@ -4,7 +4,7 @@ import xyz.baddeveloper.lwsl.ConnectionState;
 import xyz.baddeveloper.lwsl.network.NetworkConnection;
 import xyz.baddeveloper.lwsl.network.NetworkEndPoint;
 
-import java.io.IOException;
+import java.io.*;
 import java.net.Socket;
 
 // TODO: JavaDocs
@@ -13,9 +13,15 @@ public class TCPConnection extends NetworkConnection {
 
     private Socket socket;
 
-    protected TCPConnection(Socket socket) {
+    private DataInputStream inputStream;
+    private DataOutputStream outputStream;
+
+    protected TCPConnection(Socket socket) throws IOException {
         this.endPoint = new NetworkEndPoint(socket.getInetAddress(), socket.getPort());
         this.socket = socket;
+
+        this.inputStream = new DataInputStream(socket.getInputStream());
+        this.outputStream = new DataOutputStream(socket.getOutputStream());
         this.state = ConnectionState.CONNECTED;
     }
 
@@ -30,6 +36,9 @@ public class TCPConnection extends NetworkConnection {
             throw new IllegalStateException("Already connected to socket");
         }
         this.socket.connect(endPoint.getSocketAddress());
+
+        this.inputStream = new DataInputStream(socket.getInputStream());
+        this.outputStream = new DataOutputStream(socket.getOutputStream());
     }
 
     @Override

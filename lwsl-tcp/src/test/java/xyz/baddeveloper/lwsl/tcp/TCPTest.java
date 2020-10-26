@@ -12,7 +12,6 @@ public class TCPTest {
         TCPConnection tcpConnection = new TCPConnection(endPoint);
 
         tcpListener.listen();
-
         tcpConnection.connect();
 
         // Wip
