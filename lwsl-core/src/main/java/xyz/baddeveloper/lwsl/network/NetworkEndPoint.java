@@ -10,7 +10,7 @@ import java.net.UnknownHostException;
 
 public class NetworkEndPoint extends ConnectionEndPoint {
 
-    private InetSocketAddress socketAddress;
+    private final InetSocketAddress socketAddress;
 
     public NetworkEndPoint(InetAddress address, int port) {
         socketAddress = new InetSocketAddress(address, port);
