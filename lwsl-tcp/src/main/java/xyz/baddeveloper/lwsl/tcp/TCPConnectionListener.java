@@ -15,13 +15,13 @@ public class TCPConnectionListener extends NetworkConnectionListener {
 
     public TCPConnectionListener(NetworkEndPoint endPoint) {
         this.endPoint = endPoint;
+        this.handler = new TCPConnectionHandler(this);
     }
 
     @Override
     public void listen() throws IOException {
         this.socket = new ServerSocket();
         this.socket.bind(endPoint.getSocketAddress());
-        this.handler = new TCPConnectionHandler(this);
         this.handler.start();
     }
 
