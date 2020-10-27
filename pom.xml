@@ -28,4 +28,12 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
+    <distributionManagement>
+        <repository>
+            <id>solaris</id>
+            <name>Releases</name>
+            <url>https://maven.baddeveloper.xyz/repository/solaris</url>
+        </repository>
+    </distributionManagement>
 </project>
