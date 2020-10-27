@@ -28,6 +28,7 @@ public class TCPConnection extends NetworkConnection {
     public TCPConnection(NetworkEndPoint endPoint) {
         this.endPoint = endPoint;
         this.socket = new Socket();
+        this.state = ConnectionState.NOT_CONNECTED;
     }
 
     @Override
