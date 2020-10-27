@@ -27,9 +27,15 @@ package xyz.baddeveloper.lwsl.network;
 
 import xyz.baddeveloper.lwsl.Connection;
 
-// TODO: JavaDocs
-
+/**
+ * An outgoing {@link xyz.baddeveloper.lwsl.Connection} (using TCP/UDP) to a specified {@link xyz.baddeveloper.lwsl.ConnectionEndPoint}.
+ *
+ * @see xyz.baddeveloper.lwsl.network.NetworkEndPoint
+ */
 public abstract class NetworkConnection extends Connection {
 
+    /**
+     * The target {@link NetworkEndPoint} to which the connection will be made.
+     */
     protected NetworkEndPoint endPoint;
 }

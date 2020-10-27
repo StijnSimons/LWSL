@@ -25,8 +25,9 @@
 
 package xyz.baddeveloper.lwsl;
 
-// TODO: JavaDocs
-
+/**
+ * Abstract class extended by all endpoints.
+ */
 public abstract class ConnectionEndPoint {
 
 }

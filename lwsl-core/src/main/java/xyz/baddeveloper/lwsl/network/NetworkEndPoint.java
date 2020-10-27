@@ -31,20 +31,44 @@ import java.net.InetAddress;
 import java.net.InetSocketAddress;
 import java.net.UnknownHostException;
 
-// TODO: JavaDocs
-
+/**
+ * An {@link xyz.baddeveloper.lwsl.ConnectionEndPoint} used to indicate an {@link java.net.InetAddress}.
+ *
+ * @see java.net.InetSocketAddress
+ */
 public class NetworkEndPoint extends ConnectionEndPoint {
 
+    /**
+     * The target socket address including port.
+     */
     private final InetSocketAddress socketAddress;
 
+    /**
+     * Create an endpoint using an {@link java.net.InetAddress} and port.
+     *
+     * @see java.net.InetAddress#getByName(java.lang.String)
+     * @param address The target address.
+     * @param port The target port (integer between 0 and 65,535).
+     */
     public NetworkEndPoint(InetAddress address, int port) {
         socketAddress = new InetSocketAddress(address, port);
     }
 
+    /**
+     * Create an endpoint using a host or address and port.
+     *
+     * @see java.net.InetAddress#getByName(java.lang.String)
+     * @param host The target host or address.
+     * @param port The target port (integer between 0 and 65,535).
+     * @throws UnknownHostException Thrown when the target host could not be resolved.
+     */
     public NetworkEndPoint(String host, int port) throws UnknownHostException {
         this(InetAddress.getByName(host), port);
     }
 
+    /**
+     * @return Returns the current socket address and port.
+     */
     public InetSocketAddress getSocketAddress() {
         return socketAddress;
     }

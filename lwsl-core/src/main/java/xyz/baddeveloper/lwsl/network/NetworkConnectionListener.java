@@ -27,9 +27,15 @@ package xyz.baddeveloper.lwsl.network;
 
 import xyz.baddeveloper.lwsl.ConnectionListener;
 
-// TODO: JavaDocs
-
+/**
+ * An listening {@link xyz.baddeveloper.lwsl.ConnectionListener} (using TCP/UDP) that binds to a specified {@link xyz.baddeveloper.lwsl.ConnectionEndPoint}.
+ *
+ * @see xyz.baddeveloper.lwsl.network.NetworkEndPoint
+ */
 public abstract class NetworkConnectionListener extends ConnectionListener {
 
+    /**
+     * The target {@link NetworkEndPoint} where the listener will bind to.
+     */
     protected NetworkEndPoint endPoint;
 }
