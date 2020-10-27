@@ -1,6 +1,6 @@
 # LWSL
 Lightweight socket library (lwsl for short) is an open source socket library created in Java.
-It is created to assist in the usage of sockets, both TCP, (reliable) UDP (soon).
+It is created to assist in the usage of sockets, both TCP and (reliable) UDP (soon).
 
 Currently, this repository is unfinished and under construction but will soon have its first release.
 
