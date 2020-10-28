@@ -34,6 +34,9 @@ import java.net.Socket;
 
 // TODO: JavaDocs
 
+/**
+ * An outgoing {@link xyz.baddeveloper.lwsl.network.NetworkConnection} using TCP to a specified {@link xyz.baddeveloper.lwsl.network.NetworkEndPoint}.
+ */
 public class TCPConnection extends NetworkConnection {
 
     private Socket socket;
