@@ -27,6 +27,8 @@ package xyz.baddeveloper.lwsl.tcp;
 
 import java.net.Socket;
 
+// TODO: JavaDocs
+
 public class TCPConnectionHandler extends Thread {
 
     private TCPConnectionListener listener;
