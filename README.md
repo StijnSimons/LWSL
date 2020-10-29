@@ -46,3 +46,6 @@ dependencies {
     implementation 'xyz.baddeveloper:lwsl-tcp:1.0.0-SNAPSHOT'
 }
 ```
+
+## Contributing
+Check the CONTRIBUTING.md (soon) for more information.
