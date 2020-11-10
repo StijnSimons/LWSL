@@ -27,7 +27,7 @@ package xyz.baddeveloper.lwsl.event.type;
 
 // TODO: JavaDocs
 
-public abstract class CancellableEvent {
+public abstract class CancellableEvent extends Event {
 
     private boolean cancelled = false;
 
